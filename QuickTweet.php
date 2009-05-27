@@ -33,10 +33,10 @@ function post_to_twitter($post_ID)
 	$password = '0j64t10uY';
 
 	// Load the wordpress query functions
-	global $wpdb;
+	global $wp_query, $wpdb;
 
 	// Get the post that we just published from the database
-	$post = $wpdb->get_row("SELECT * FROM $wpdb-&gt;posts WHERE id = '$post_ID'", ARRAY_A);
+	$post = $wpdb->get_row("SELECT * FROM $wpdb->posts WHERE id = '$post_ID'", ARRAY_A);
 
 	// The message that will appear on Twitter
 	$msg = 'New post: '.$post['post_title'].' @ '.$post['guid'].'';
