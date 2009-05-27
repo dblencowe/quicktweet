@@ -29,8 +29,8 @@ add_action('publish_post', 'post_to_twitter');
 function post_to_twitter($post_ID)
 {
 	// The username and password of the twitter account you would like to Tweet to
-	$username = 'dblencowe';
-	$password = '0j64t10uY';
+	$username = 'USERNAME';
+	$password = 'PASSWORD';
 
 	// Load the wordpress query functions
 	global $wp_query, $wpdb;
